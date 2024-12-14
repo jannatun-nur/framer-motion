@@ -2,14 +2,16 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="hero bg-white min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <motion.div
+    <div 
+   
+    
+    className="hero bg-white min-h-screen">
+      <div id='contact'
+      className="hero-content flex-col lg:flex-row-reverse">
+        <div
         
         
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 4 }}
+       
          className="text-center lg:text-left">
 
 
@@ -38,18 +40,24 @@ const Contact = () => {
             complex financial landscapes and achieving financial stability. <span className="text-xl text-blue-900 font-bold ">Your trust 
             is our strength.</span>
           </p>
-        </motion.div>
+        </div>
 
-        <div 
+        <motion.div 
         
-        
+        initial={{ opacity: 4, y: 60 }}
+        animate={{ opacity: 4, y: 0, scale:1.0 }}
+        transition={{ duration: 5 }}
+        whileHover={{ scale: 1.2 }}
+        whileFocus={{scale: 1.0}}
         
         className="card bg-white  shadow-blue-800 w-full max-w-sm shrink-0 shadow-2xl">
           <motion.div 
           
-          initial={{ opacity: 4, y: -50 }}
+          initial={{ opacity: 4, y: 60 }}
         animate={{ opacity: 4, y: 0 }}
         transition={{ duration: 4 }}
+        
+
           className="text-center ">
 
    
@@ -91,12 +99,18 @@ const Contact = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="py-3 text-xl rounded-tr-badge text-white bg-gradient-to-r from-cyan-500 to-blue-800">
+              <motion.button
+              whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+ 
+              
+              
+               className="py-3 text-xl rounded-tr-badge text-white bg-gradient-to-r from-cyan-500 to-blue-800">
                 Send message
-              </button>
+              </motion.button>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

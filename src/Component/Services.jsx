@@ -25,17 +25,19 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" style={{ padding: "40px", textAlign: "center" }}>
+    <section id="service" style={{ padding: "40px", textAlign: "center" }}>
       <motion.p
         initial={{ opacity: 0 , y: -60}}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 3 }}
+        
        className="text-xl lg:text-4xl text-center font-semibold my-4 text-blue-900"> Our services</motion.p>
       <motion.div
         style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "20px" }}
-        initial={{ opacity: 0 , x: -60}}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 3 }}
+        initial={{ y: 20 }}
+  animate={{ y: 0 }}
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.9 }}
       >
         {services.map((service, index) => (
           <motion.div

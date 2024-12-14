@@ -26,7 +26,9 @@ const Banner = () => {
       <p className="py-6 text-gray-800 lg:text-2xl text-xl text-center lg:text-start">
       Empowering businesses and individuals to achieve financial success.
       </p>
-      <button className="bg-gradient-to-r from-cyan-500 to-blue-800 px-3 py-2 text-xl ml-6 md:ml-44 lg:ml-0
+      <button
+      onClick={() => alert("Free Consultation Form Coming Soon!")}
+       className="bg-gradient-to-r from-cyan-500 to-blue-800 px-3 py-2 text-xl ml-6 md:ml-44 lg:ml-0
       lg:px-5 lg:py-2 rounded-tl-lg text-white lg:text-2xl">Get a Free Consultation</button>
     </div>
   </div>
